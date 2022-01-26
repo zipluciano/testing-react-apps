@@ -2,17 +2,17 @@
 // this renders a login UI and calls the onSubmit handler with the username
 // and password when the user submits the form.
 
-import * as React from 'react'
+import * as React from "react";
 
-function Login({onSubmit}) {
+function Login({ onSubmit }) {
   function handleSubmit(event) {
-    event.preventDefault()
-    const {username, password} = event.target.elements
+    event.preventDefault();
+    const { username, password } = event.target.elements;
 
     onSubmit({
       username: username.value,
       password: password.value,
-    })
+    });
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ function Login({onSubmit}) {
         <button type="submit">Submit</button>
       </div>
     </form>
-  )
+  );
 }
 
-export default Login
+export default Login;
